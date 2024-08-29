@@ -1,6 +1,6 @@
 {
   "name": "ngx-image-viewer-3",
-  "version": "1.0.9",  
+  "version": "1.0.10",  
   "peerDependencies": {
     "@angular/common": ">=5.0.0",
     "@angular/core": ">=5.0.0"    
@@ -12,5 +12,13 @@
     "font-awesome":"^4.7.0",
     "screenfull": "^3.3.2"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "repository": {
+    "url": "https://github.com/siroz1907/ngx-image-viewer.git"
+  },"keywords": [
+    "ngx-image-viewer","ngx-image",
+    "image-viewer","image","image-view",
+    "ng-image-viewer","ng-imager",
+    "angular image viewer","image view","image viewer"
+  ]
 }

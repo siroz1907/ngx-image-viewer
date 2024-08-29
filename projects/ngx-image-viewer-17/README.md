@@ -1,4 +1,4 @@
-# NgxImageViewer17
+# NgxImageViewer
 
 This package is an updated version of the ngx-image-viewer package for Angular17.
 
@@ -21,7 +21,7 @@ https://stackblitz.com/edit/stackblitz-starters-gzx4gb
 To use default configuration, simply import the ImageViewerModule into your module, like so:
 
 ```javascript
-import { ImageViewerModule } from "ngx-image-viewer-17";
+import { ImageViewerModule } from "ngx-image-viewer-3";
 
 @NgModule({
   //...
