@@ -1,0 +1,16 @@
+{
+  "name": "ngx-image-viewer-3",
+  "version": "1.0.9",  
+  "peerDependencies": {
+    "@angular/common": ">=5.0.0",
+    "@angular/core": ">=5.0.0"    
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "font-awesome":"^4.7.0",
+    "screenfull": "^3.3.2"
+  },
+  "sideEffects": false
+}

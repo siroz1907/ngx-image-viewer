@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="display: flex">
+  <div style="width: 100%; display: flex">
+    <ngx-image-viewer id="imgView"
+                      [src]="images"
+                      [(config)]="config"
+                      [(index)]="imageIndexOne"
+                      (customEvent)="handleEvent($event)">
+    </ngx-image-viewer>
+
+</div>
