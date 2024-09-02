@@ -46,6 +46,8 @@ If you want to use the standard icons, you will also need to install `font-aweso
 
 ```
 npm install --save font-awesome
+npm install --save-dev @types/screenfull
+
 ```
 
 Otherwise, you will need to use the configuration to set different icon classes.
