@@ -2,37 +2,48 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "esModuleInterop": true,    
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES2022",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "paths": {
+      "ngx-image-viewer-yukle": [        
+        "./dist/ngx-image-viewer-lib",
+        
+      ],
+      "ngx-image-viewer-yukle/*": [   
+        "./dist/ngx-image-viewer-lib/*"
+      ]
+    },
+    "useDefineForClassFields": false,
+
     "strict": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
-    "paths": {
-      "ngx-image-viewer-17": [
-        "./dist/ngx-image-viewer-17"
-      ]
-    },
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "declaration": false,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "ES2022",
+    "noFallthroughCasesInSwitch": true,    
+    "skipLibCheck": true,    
+    "downlevelIteration": true,       
+    "importHelpers": true,    
     "module": "ES2022",
-    "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "resolveJsonModule": true,    
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true,
-    "compilationMode":"partial"
+    "strictTemplates": true
   }
 }

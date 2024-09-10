@@ -63,7 +63,7 @@
               "projects/demo/src/assets"
             ],
             "styles": [
-              "../node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "projects/demo/src/styles.scss"
             ],
             "scripts": []
@@ -125,6 +125,115 @@
             ],
             "styles": [
               "projects/demo/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "test-projesi": {
+      "projectType": "application",          
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/test-projesi",
+      "sourceRoot": "projects/test-projesi/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/test-projesi",
+            "index": "projects/test-projesi/src/index.html",
+            "browser": "projects/test-projesi/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/test-projesi/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/test-projesi/src/favicon.ico",
+              "projects/test-projesi/src/assets"
+            ],
+            "styles": [
+              "projects/test-projesi/src/styles.scss"
+            ],
+            "scripts": []                        
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,              
+              "sourceMap": false,              
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "test-projesi:build:production"
+            },
+            "development": {
+              "buildTarget": "test-projesi:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "test-projesi:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/test-projesi/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/test-projesi/src/favicon.ico",
+              "projects/test-projesi/src/assets"
+            ],
+            "styles": [
+              "projects/test-projesi/src/styles.scss"
             ],
             "scripts": []
           }
