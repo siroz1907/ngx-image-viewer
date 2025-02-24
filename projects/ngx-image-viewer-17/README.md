@@ -30,6 +30,10 @@ import { ImageViewerModule } from "ngx-image-viewer-3";
     ImageViewerModule
   ],
   //...
+  //You may receive the error "To allow any property add 'NO_ERRORS_SCHEMA'". In this case, add the following line.
+  schemas:[
+    NO_ERRORS_SCHEMA
+  ]
 })
 ```
 

@@ -1,10 +1,16 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "extends": "./tsconfig.lib.json",
-  "compilerOptions": {
-    "declarationMap": false,    
+  "compilerOptions": {    
+    "declarationMap": false,
+    "declaration": false,
+    "inlineSources": true,
+    "types": [],
+    "sourceMap": false,    
+    
   },
   "angularCompilerOptions": {
-    "compilationMode": "partial"
+    "compilationMode": "partial",
+    //"enableIvy":true,
   }  
 }

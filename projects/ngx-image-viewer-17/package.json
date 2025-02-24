@@ -1,6 +1,6 @@
 {
   "name": "ngx-image-viewer-3",
-  "version": "1.0.18",  
+  "version": "1.0.20",  
   "peerDependencies": {
     "@angular/common": ">=5.0.0",
     "@angular/core": ">=5.0.0",

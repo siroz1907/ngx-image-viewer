@@ -10,8 +10,7 @@ import { CustomEvent, ImageViewerConfig } from '../../../ngx-image-viewer-17/src
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
+  imports: [    
     FormsModule,
     ImageViewerModule,
   ],

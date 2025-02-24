@@ -1,4 +1,6 @@
-import {Component, OnInit, Input, Optional, Inject, Output, EventEmitter, HostListener} from '@angular/core';
+
+import { Component, Input, Output, OnInit,EventEmitter, Optional, Inject, HostListener } from '@angular/core';
+
 import { ImageViewerConfig, CustomEvent } from './image-viewer-config.model';
 
 const DEFAULT_CONFIG: ImageViewerConfig = {
@@ -34,7 +36,7 @@ const DEFAULT_CONFIG: ImageViewerConfig = {
 })
 export class ImageViewerComponent implements OnInit {
 
-  @Input()src!: string[];
+  @Input()src: string[];
 
   @Input()index = 0;
 
